@@ -18,22 +18,22 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping
-    private ResponseEntity<ApiOutput<?>> getAllCategory() {
+    public ResponseEntity<ApiOutput<?>> getAllCategory() {
         return ResponseEntity.ok(new ApiOutput<>(categoryService.getAllCategory()));
     }
 
     @GetMapping("/{id}")
-    private ResponseEntity<ApiOutput<?>> getCategoryById(@PathVariable UUID id) {
+    public ResponseEntity<ApiOutput<?>> getCategoryById(@PathVariable UUID id) {
         return ResponseEntity.ok(new ApiOutput<>(categoryService.getCategoryById(id)));
     }
 
     @PostMapping
-    private ResponseEntity<ApiOutput<?>> addCategory(@RequestBody CategoryDto categoryDto) {
+    public ResponseEntity<ApiOutput<?>> addCategory(@RequestBody CategoryDto categoryDto) {
         return ResponseEntity.ok(new ApiOutput<>(categoryService.addCategory(categoryDto)));
     }
 
     @PutMapping
-    private ResponseEntity<ApiOutput<?>> updateCategory(@RequestBody CategoryDto categoryDto) {
+    public ResponseEntity<ApiOutput<?>> updateCategory(@RequestBody CategoryDto categoryDto) {
         return ResponseEntity.ok(new ApiOutput<>(categoryService.updateCategory(categoryDto)));
     }
 }
