@@ -21,7 +21,7 @@ public class CategoryRepositoryTest {
 		UUID id = null;
 		boolean isDeleted = true;
 		Category expected = new Category();
-		Category actual = categoryRepository.findByIdAndIsDeleted(id, isDeleted);
+		Category actual = categoryRepository.findByIdAndIsDeleted(id, isDeleted).orElse(null);
 
 		assertEquals(expected, actual);
 	}
