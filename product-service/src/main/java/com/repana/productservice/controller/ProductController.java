@@ -1,10 +1,8 @@
 package com.repana.productservice.controller;
 
 import com.repana.common.dto.ApiOutput;
-import com.repana.productservice.dto.CategoryDto;
 import com.repana.productservice.dto.ProductDto;
 import com.repana.productservice.service.ProductService;
-import jakarta.ws.rs.PUT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
